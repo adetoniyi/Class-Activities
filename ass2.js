@@ -5,14 +5,14 @@
 
 function secondLargest(arr) {
     if (arr.length < 2) return null 
-    let first = -Infinity, second = -Infinity
+    let first = -Infinity, second = -Infinity, third = -Infinity
     for (let num of arr) {
         if (num > first) {
             second = first
             first = num
         } else if (num > second && num < first) {
-            second = num
-        }
+            second = num 
+        } 
     }
     return second === -Infinity ? null : second 
 }
